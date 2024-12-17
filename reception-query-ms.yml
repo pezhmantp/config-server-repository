@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: RECEPTION-QUERY-MS
-  config:
-    import: configserver:http://localhost:8888
 #  profiles:
 #    active: docker
   security:
