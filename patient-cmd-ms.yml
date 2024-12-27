@@ -12,12 +12,13 @@ spring:
     url: jdbc:mysql://mysql-docker-compose:3306/patient_db?createDatabaseIfNotExist=true
     username: root
     password: myhawramRootPsw1
+    driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.MySQLDialect
-    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    # defer-datasource-initialization: true
     show-sql: true
 axon:
   axonserver:
