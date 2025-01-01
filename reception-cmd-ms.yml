@@ -9,7 +9,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/realms/hisclientapp/protocol/openid-connect/certs
+          jwk-set-uri: http://keycloak-docker-compose:8080/realms/hisclientapp/protocol/openid-connect/certs
   datasource:
     url: jdbc:mysql://mysql-docker-compose:3306/reception_db?createDatabaseIfNotExist=true
     username: root
