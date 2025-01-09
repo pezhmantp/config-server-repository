@@ -7,6 +7,14 @@ gateway-service:
   sliding-window-size: 10
   min-number-of-calls: 10
   wait-duration-in-open-state: 60000
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: health, info, circuitbreakers
 server:
   port: 9096
 spring:
