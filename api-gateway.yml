@@ -218,6 +218,3 @@ spring:
               args:
                 name: patientQueryServiceCircuitBreaker
                 fallbackUri: forward:/fallback/patient-query-fallback
-                statusCodes:
-                  - 500
-                  - "NOT_FOUND"
