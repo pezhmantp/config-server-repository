@@ -33,9 +33,9 @@ spring:
   application:
     name: API-GATEWAY
   cloud:
-    # loadbalancer:
-    #   ribbon:
-    #     enabled: false
+    loadbalancer:
+      ribbon:
+        enabled: false
     gateway:
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
