@@ -61,10 +61,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: visitQueryService1CircuitBreaker
-                fallbackUri: forward:/fallback/visit-query-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: visitQueryService1CircuitBreaker
+            #     fallbackUri: forward:/fallback/visit-query-fallback
         - id: VISIT-CMD-MS
           uri: lb://VISIT-CMD-MS
           predicates:
@@ -75,10 +75,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: visitCmdService1CircuitBreaker
-                fallbackUri: forward:/fallback/visit-cmd-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: visitCmdService1CircuitBreaker
+            #     fallbackUri: forward:/fallback/visit-cmd-fallback
         - id: LABORATORY-CMD-MS
           uri: lb://LABORATORY-CMD-MS
           predicates:
@@ -89,10 +89,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: labCmdService1CircuitBreaker
-                fallbackUri: forward:/fallback/lab-cmd-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: labCmdService1CircuitBreaker
+            #     fallbackUri: forward:/fallback/lab-cmd-fallback
         - id: LABORATORY-QUERY-MS
           uri: lb://LABORATORY-QUERY-MS
           predicates:
@@ -103,10 +103,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: labQueryService1CircuitBreaker
-                fallbackUri: forward:/fallback/lab-query-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: labQueryService1CircuitBreaker
+            #     fallbackUri: forward:/fallback/lab-query-fallback
         - id: PHARMACY-CMD-MS1
           uri: lb://PHARMACY-CMD-MS
           predicates:
@@ -117,10 +117,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: pharmacyCmdService1CircuitBreaker
-                fallbackUri: forward:/fallback/pharmacy-cmd-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: pharmacyCmdService1CircuitBreaker
+            #     fallbackUri: forward:/fallback/pharmacy-cmd-fallback
         - id: PHARMACY-CMD-MS2
           uri: lb://PHARMACY-CMD-MS
           predicates:
@@ -131,10 +131,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: pharmacyCmdService2CircuitBreaker
-                fallbackUri: forward:/fallback/pharmacy-cmd-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: pharmacyCmdService2CircuitBreaker
+            #     fallbackUri: forward:/fallback/pharmacy-cmd-fallback
         - id: PHARMACY-QUERY-MS1
           uri: lb://PHARMACY-QUERY-MS
           predicates:
@@ -145,10 +145,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: pharmacyQueryService1CircuitBreaker
-                fallbackUri: forward:/fallback/pharmacy-query-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: pharmacyQueryService1CircuitBreaker
+            #     fallbackUri: forward:/fallback/pharmacy-query-fallback
         - id: PHARMACY-QUERY-MS2
           uri: lb://PHARMACY-QUERY-MS
           predicates:
@@ -159,10 +159,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: pharmacyQueryService2CircuitBreaker
-                fallbackUri: forward:/fallback/pharmacy-query-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: pharmacyQueryService2CircuitBreaker
+            #     fallbackUri: forward:/fallback/pharmacy-query-fallback
         - id: RECEPTION-QUERY-MS
           uri: lb://RECEPTION-QUERY-MS
           predicates:
@@ -173,10 +173,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: receptionQueryServiceCircuitBreaker
-                fallbackUri: forward:/fallback/reception-query-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: receptionQueryServiceCircuitBreaker
+            #     fallbackUri: forward:/fallback/reception-query-fallback
         - id: RECEPTION-CMD-MS
           uri: lb://RECEPTION-CMD-MS
           predicates:
@@ -187,10 +187,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: receptionCmdServiceCircuitBreaker
-                fallbackUri: forward:/fallback/reception-cmd-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: receptionCmdServiceCircuitBreaker
+            #     fallbackUri: forward:/fallback/reception-cmd-fallback
         - id: PATIENT-CMD-MS
           uri: lb://PATIENT-CMD-MS
           predicates:
@@ -201,10 +201,10 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 key-resolver: "#{@authHeaderResolver}"
-            - name: CircuitBreaker
-              args:
-                name: patientCmdServiceCircuitBreaker
-                fallbackUri: forward:/fallback/patient-cmd-fallback
+            # - name: CircuitBreaker
+            #   args:
+            #     name: patientCmdServiceCircuitBreaker
+            #     fallbackUri: forward:/fallback/patient-cmd-fallback
         - id: PATIENT-QUERY-MS
           uri: lb://PATIENT-QUERY-MS
           predicates:
