@@ -7,14 +7,26 @@ gateway-service:
   sliding-window-size: 10
   min-number-of-calls: 10
   wait-duration-in-open-state: 60000
+# management:
+#   tracing:
+#     sampling:
+#       probability: 1.0
+#   endpoints:
+#     web:
+#       exposure:
+#         include: health, info, circuitbreakers
 management:
-  tracing:
-    sampling:
-      probability: 1.0
   endpoints:
     web:
-      exposure:
-        include: health, info, circuitbreakers
+      base-path: /actuator
+      exposure.include: health, gateway
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      cache.time-to-live: 1ms
+    gateway:
+      enabled: true
 server:
   port: 9096
 spring:
@@ -36,6 +48,7 @@ spring:
       discovery:
         locator:
           enabled: false
+          lowerCaseServiceId: true
       routes:
         - id: VISIT-QUERY-MS
           uri: lb://VISIT-QUERY-MS
