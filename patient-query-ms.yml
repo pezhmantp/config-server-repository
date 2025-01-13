@@ -19,7 +19,7 @@ spring:
     show-sql: true
 axon:
   axonserver:
-    servers: axon-docker-compose:8124
+    servers: localhost:8124
   serializer:
     general: jackson
     events: jackson
