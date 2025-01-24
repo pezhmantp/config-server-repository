@@ -14,7 +14,7 @@ spring:
     show-sql: true
 axon:
   axonserver:
-    servers: localhost:8024,localhost:8124
+    servers: localhost:8124
   serializer:
     general: jackson
     events: jackson
