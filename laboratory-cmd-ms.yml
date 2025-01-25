@@ -9,7 +9,7 @@ spring:
       oauth2:
         resourceserver:
           jwt:
-            jwk-set-uri: http://localhost:8080/realms/hisclientapp/protocol/openid-connect/certs
+            jwk-set-uri: http://localhost:8079/realms/hisclientapp/protocol/openid-connect/certs
   datasource:
     url: jdbc:mysql://localhost:3306/laboratory_db?createDatabaseIfNotExist=true
     username: root
