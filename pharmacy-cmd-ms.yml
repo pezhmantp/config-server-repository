@@ -7,8 +7,10 @@ spring:
     url: jdbc:mysql://localhost:3306/pharmacy_db?createDatabaseIfNotExist=true
     username: root
     password: myhawramRootPsw1
+    initialization-mode: always
   jpa:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true
+    defer-datasource-initialization: true
